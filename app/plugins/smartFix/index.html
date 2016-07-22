@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../sys/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../sys/css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/demo.css">
+</head>
+<body class="smartFix">
+	<div id="header"></div>
+	<div class="container">
+		<div id="nav" class="smartFixElem" data-setting='{"offsetTopVal": "0"}'>
+			自动滚动定位区块一 --- 头部导航
+		</div>
+		<div class="clearfix wrapper">
+			<div class="left">
+				<ul>
+					<li>
+						<span class="label">参数：</span>（以html属性的形式绑定到元素上）
+						<ul class="explain">
+							<li>
+								offsetTopVal --- 指定元素定位是距离定位总容器顶部的距离值，默认为0。
+							</li>
+							<li>
+								zIndexVal --- 指定定位元素定位是的z-index值，默认为0。
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="label">注意：</span>
+						<ul class="explain">
+							<li>
+								参数是以html元素的属性绑定到元素上的，在js获取属性并解析时需要保证该属性值的定义格式要符合json字符串的格式，即：属性和值(非数值、布尔值的值)必须要被双引号包裹，否则会出现js解析错误。
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="label">支持：</span>
+						<ul class="explain">
+							<li>
+								支持自动浮动定位元素是通过ajax动态填充进来；
+							</li>
+							<li>支持自动浮动部分的高度的动态改变（即：当自身高度改变时可以自己调整，还会计算定位）；</li>
+							<li>
+								支持脚部不遮挡（即：当滚动部分定位部分随着滚动会遮挡脚部时，浮动分布会跟随向上滚动）
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="label">用法：</span>
+						<ul class="explain">
+							<li>
+								给需要浮动定位的元素添加类 .smartFixElem ，元素就会实现自动定位。没错，就是这么简单，更多的参数可移动过 data-setting 属性指定
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="label">已知bug：</span>
+						<ul class="explain">
+							<li>
+								场景一：左侧主体部分是一个dom结构可以改变的列表，在改变列表高度时会偶现定位不准确的情况，(图片一)
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="label">更新日志：</span>
+						<ul id="versions" class="explain">
+							<li>更新日志读取中...</li>
+						</ul>
+					</li>
+					<li>
+						<span class="label">一下是demo高度支撑条目：</span>
+						<ul class="explain demo">
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="smartFixElem" data-setting='{"offsetTopVal": "50"}'>
+					<div class="wrapper" style="padding-top:0;">
+						<ul>
+							<li>
+								这是侧边栏部分，滚动自动定位顶部的侧边部分
+							</li>
+							<li>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, magnam, fugiat. Vitae, alias non quae. Recusandae, quis repellat ipsam tempora, expedita tenetur ducimus adipisci nesciunt explicabo debitis, illum maiores, beatae.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="smartFixElemFooter">
+		CopyRight &copy; wangshuai
+	</div>
+
+	<script type="text/javascript" src="../../sys/plugins/jQuery/jQuery 1.12.0.min.js"></script>
+	<script type="text/javascript" src="./js/smartFix.js"></script>
+	<!-- 读取插件日志的方法 -->
+	<script type="text/javascript" src="../../sys/js/getVersions.js"></script>
+</body>
+</html>

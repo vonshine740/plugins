@@ -1,0 +1,86 @@
+/*plugins-smartFloat*/
+
+/*表单输入样式*/
+
+.input-item{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.input-body{
+	margin-left: 7em;
+
+	position: relative;
+	z-index: 1;
+}
+.input-body:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.input-body{
+	*zoom:1;
+}
+.input-label{
+	position: absolute;
+	left: -7em;
+	top:6px;
+
+	width: 7em;
+
+	font-family: '宋体';
+	color: #898989;
+	font-weight: bold;
+	text-align: right;
+}
+
+.input-frame{
+	height: 34px;
+	width: 60%;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	background-color: #fbfbfb;
+
+	float: left;
+	overflow: hidden;
+
+	line-height: 34px;
+}
+.input-frame input,
+.input-frame select,
+.input-frame textarea{
+	display: block;
+	
+	width: 100%;
+	padding: 7px 0 8px 0;
+	border: none;
+	margin: 0 8px;
+	background-color: transparent;
+
+	line-height: normal;
+}
+.input-message{
+	margin-top: 8px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+	color: #898989;
+	font-family: '宋体';
+
+	float: left;
+}
+.input-message.block{
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+.input-wrong{
+	margin-top: 8px;
+
+	color: #f00;
+
+	float: left;
+}
+.input-wrong.block{
+	width: 100%;
+	margin-top: 10px;
+}

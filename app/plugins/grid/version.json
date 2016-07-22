@@ -1,0 +1,16 @@
+{
+	"info" : {
+		"name": "前端插件 -- 指定输入框输入类型",
+		"en" : "smartFix"
+		},
+	"versions" : [
+		{
+			"date": "2016-1-21",
+			"desc": "添加整理归档。",
+			"file": {
+				"compress": "",
+				"uncompress": ""
+			}
+		}
+	]
+}

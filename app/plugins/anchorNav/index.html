@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../sys/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../sys/css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/demo.css">
+</head>
+<body class="smartFix">
+	<div id="header"></div>
+	<div class="container">
+		<div id="nav" class="smartFixElem anchorNav" data-setting='{"offsetTopVal": "0", "zIndexVal": 2000}'>
+			<a class="active" href="#briefInfo">简要介绍</a>
+			<a href="#options">参数说明</a>
+			<a href="#warns">注意事项</a>
+			<a href="#version-anchor">版本更信息</a>
+			<a href="#demo">区块很矮</a>
+		</div>
+		<div class="clearfix wrapper">
+			<div class="left">
+				<ul>
+					<li class="partBox">
+						<a name="briefInfo" class="anchor-pos anchorItem" id="briefInfo"></a>
+						<span class="label">参数：</span>（以html属性的形式绑定到元素上）
+						<ul class="explain">
+							<li>
+								offsetTopVal --- 指定元素定位是距离定位总容器顶部的距离值，默认为0。
+							</li>
+							<li>
+								zIndexVal --- 指定定位元素定位是的z-index值，默认为0。
+							</li>
+						</ul>
+					</li>
+					<li class="partBox">
+						<a name="options" class="anchor-pos anchorItem" id="options"></a>
+						<span class="label">参数：</span>（以html属性的形式绑定到元素上）
+						<ul class="explain">
+							<li>
+								offsetTopVal --- 指定元素定位是距离定位总容器顶部的距离值，默认为0。
+							</li>
+							<li>
+								zIndexVal --- 指定定位元素定位是的z-index值，默认为0。
+							</li>
+						</ul>
+					</li>
+					<li class="partBox">
+						<a name="warns" class="anchor-pos anchorItem" id="warns"></a>
+						<span class="label">注意：</span>
+						<ul class="explain">
+							<li>
+								参数是以html元素的属性绑定到元素上的，在js获取属性并解析时需要保证该属性值的定义格式要符合json字符串的格式，即：属性和值(非数值、布尔值的值)必须要被双引号包裹，否则会出现js解析错误。
+							</li>
+						</ul>
+					</li>
+					<li class="partBox">
+						<a name="version-anchor" class="anchor-pos anchorItem" id="version-anchor"></a>
+						<span class="label">更新日志：</span>
+						<ul id="versions" class="explain">
+							<li>更新日志读取中...</li>
+						</ul>
+					</li>
+					<li class="partBox">
+						<a name="demo" class="anchor-pos anchorItem" id="demo"></a>
+						<span class="label">用法：</span>
+						<ul class="explain">
+							<li>
+								给需要浮动定位的元素添加类 .smartFixElem ，元素就会实现自动定位。没错，就是这么简单，更多的参数可移动过 data-setting 属性指定
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="label">一下是demo高度支撑条目：</span>
+						<ul class="explain demo">
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime, et, libero laudantium reiciendis voluptate voluptas cum sapiente quod iure dolorem quidem, nisi praesentium voluptatum nesciunt inventore eius error pariatur.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="smartFixElem" data-setting='{"offsetTopVal": "50"}'>
+					<div class="wrapper" style="padding-top:0;">
+						<ul>
+							<li>
+								这是侧边栏部分，滚动自动定位顶部的侧边部分
+							</li>
+							<li>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, magnam, fugiat. Vitae, alias non quae. Recusandae, quis repellat ipsam tempora, expedita tenetur ducimus adipisci nesciunt explicabo debitis, illum maiores, beatae.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="javascript:scrollTo(0,0)" class="toTop">^</a>
+	<div id="footer" class="smartFixElemFooter anchorScroll-footer">
+		CopyRight &copy; wangshuai
+	</div>
+
+	<script type="text/javascript" src="../../sys/plugins/jQuery/jQuery 1.12.0.min.js"></script>
+	<script type="text/javascript" src="../smartFix/js/smartFix.js"></script>
+	<script type="text/javascript" src="./js/anchorNav-1.0.js"></script>
+	<!-- 读取插件日志的方法 -->
+	<script type="text/javascript" src="../../sys/js/getVersions.js"></script>
+
+	<script type="text/javascript">
+		//鼠标滚动切换效果
+        anchorScroll({
+            fixOffset : 90
+        });
+
+        $(document).on('scroll', function(){
+        	returnTop();
+        });
+
+        /**
+		 * by wangshuai
+		 * 返回顶部
+		 * 全局调用（页面加载）
+		 * 无参数
+		 */
+		function returnTop(){
+			console.log(1);
+		    var h = parseInt($(document).scrollTop());
+		    var screen_h = $(window).outerHeight();
+		    if( h > screen_h*2/3 ){
+		        if( $('.toTop').length > 0 && $('.toTop').css('display') == 'none' ){
+		            $('.toTop').fadeIn('1000');
+		        }
+		    }else{
+		        $('.toTop').fadeOut('1000');
+		    }
+		}
+	</script>
+</body>
+</html>

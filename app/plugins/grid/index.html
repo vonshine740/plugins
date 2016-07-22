@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../sys/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../sys/css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/demo.css">	
+</head>
+<body class="limitInput">
+	<div id="header"></div>
+	<div class="container">
+		
+		<div class="clearfix wrapper">
+			<section class="demo-sec">
+				<h2>整体效果展示：</h2>
+				<div class="wrapper">
+
+					<dl>
+
+						<dd class="input-item">
+                            <div class="input-body">
+                            	<label class="input-label">仅支持整数：</label>
+                                <div class="input-frame">
+                                    <input type="text" class="numOnly" maxlength="10" name="stock" numOnly-max="1000000000"/>
+                                </div>
+                                <span class="input-message">默认支持</span>
+                                <div class="input-wrong">错误提示</div>
+                            </div>
+                        </dd>
+
+						<dd class="input-item">
+	                        <div class="input-body">
+	                        	<label class="input-label">支持小数：</label>
+	                            <div class="input-frame">
+	                                <input type="text" class="numOnly" maxlength="13" name="price" value="0" numonly-type="float" numonly-max="1000000000" />
+	                            </div>
+	                            <span class="input-message block">需要添加属性 >> <em class="em">numonly-type="float"</em></span>
+	                            <div class="input-wrong block">错误提示</div>
+	                        </div>
+	                    </dd>
+
+					</dl>
+
+				</div>
+			</section>
+			<ul>
+				<li>
+					<span class="label">安装：</span>
+					<ul class="explain">
+						<li>
+							引入jQuery作为基础
+						</li>
+						<li>
+							引入limitInput.js脚本文件
+						</li>
+						<li>
+							给需要限制输入的输入框定义一个共同的类，比如：numOnly
+						</li>
+						<li>
+							在dom加载完后执行如下代码：
+							<code>
+								$('.numOnly').inputNumOnly();
+							</code>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span class="label">参数：</span>（以html属性的形式绑定到元素上）
+					<ul class="explain">
+						<li>
+							numOnly-max --- 允许输入的最大值，可配合输入框自身的 maxlength 属相一起使用；
+						</li>
+						<li>
+							numonly-type --- 指定输入的数字类型，缺省为 (0,numOnl-max) 	区间内的整数；
+							可指定为 ‘float’ 值，支持两位小数的浮点值；
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span class="label">优化：</span>
+					<ul class="explain">
+						<li>
+							目前仅支持 <em class="em">整数数字 && 保留两位小数的浮点数字</em> 这两种格式，而且验证正则表达式是内置到插件中的。日后需要优化为用户可以 <em class="em">自定义正则表达式 && 数据类型 && 格式化输入内容</em>......
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span class="label">更新日志：</span>
+					<ul id="versions" class="explain">
+						<li>更新日志读取中...</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer" class="smartFixElemFooter">
+		CopyRight &copy; wangshuai
+	</div>
+
+	<script type="text/javascript" src="../../sys/plugins/jQuery/jQuery 1.12.0.min.js"></script>
+	<!-- 读取插件日志的方法 -->
+	<script type="text/javascript" src="../../sys/js/getVersions.js"></script>
+	<script type="text/javascript" src="./js/limitInput.js"></script>
+	<script type="text/javascript">
+		$('.numOnly').inputNumOnly();
+	</script>
+</body>
+</html>

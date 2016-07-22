@@ -1,0 +1,16 @@
+{
+	"info" : {
+		"name": "前端插件 -- 表单验证工具",
+		"en" : "validate"
+		},
+	"versions" : [
+		{
+			"date": "2016-1-28",
+			"desc": "添加整理归档。",
+			"file": {
+				"compress": "",
+				"uncompress": ""
+			}
+		}
+	]
+}

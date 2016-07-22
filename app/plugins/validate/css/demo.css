@@ -1,0 +1,7 @@
+.input-frame .input-label{
+	width: 4em;
+	left: -4em;
+}
+.input-frame .input-body{
+	margin-left: 4em;
+}

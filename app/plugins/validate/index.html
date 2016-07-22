@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../sys/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../sys/css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/demo.css">	
+</head>
+<body class="limitInput">
+	<div id="header"></div>
+	<div class="container">
+		
+		<div class="clearfix wrapper">
+			<section class="demo-sec">
+				<h2>表单验证：</h2>
+				<div class="wrapper">
+					<form class="inputSection">
+						<dl>
+							<dd class="input-item">
+	                            <div class="input-body">
+	                            	<label class="input-label"><b class="required">*</b> 姓名：</label>
+	                                <div class="input-frame">
+	                                    <input type="text" name="name" data-require="true" data-empty="请输入姓名" data-error="姓名格式不正确" data-reg="^[a-zA-Z\u4e00-\u9fa5#]{0,10}$" data-type="title"/>
+	                                </div>
+	                                <!-- <span class="input-message">必填项</span> -->
+	                                <div class="input-wrong wrongMsg" data-default="姓名只能是英文中文">姓名只能是英文中文</div>
+	                            </div>
+	                        </dd>
+					
+	                        <dd class="input-item">
+	                            <div class="input-body">
+	                            	<label class="input-label">英文名：</label>
+	                                <div class="input-frame">
+	                                    <input type="text" data-error="英文名格式不正确" data-reg="^[a-zA-Z]{0,20}$"/>
+	                                </div>
+	                                <span class="input-message">非必填项</span>
+	                                <div class="input-wrong wrongMsg"></div>
+	                            </div>
+	                        </dd>
+
+							<dd class="input-item">
+		                        <div class="input-body">
+		                        	<label class="input-label"><b class="required">*</b> 性别：</label>
+		                            <div class="input-frame input-box">
+		                                <input type="radio" name="sex" value="1" id="sex_1" data-require="true" data-empty="请选择性别" data-error="请选择性别" data-type="radio"/>
+		                                <label for="sex_1">男</label>
+		                                <input type="radio" name="sex" value="0" id="sex_0" data-require="true" data-empty="请选择性别" data-error="请选择性别" data-type="radio"/>
+		                                <label for="sex_0">女</label>
+		                            </div>
+		                            <span class="input-message">必填项</span>
+		                            <div class="input-wrong wrongMsg"></div>
+		                        </div>
+		                    </dd>
+							
+							<dd class="input-item">
+	                            <div class="input-body">
+	                            	<label class="input-label"><b class="required">*</b> 密码：</label>
+	                                <div class="input-frame">
+	                                    <input type="text" name="pwd" id="pwdRepeat" data-require="true" data-empty="请输入密码" data-error="密码格式不正确" data-reg="^[a-zA-Z0-9]{6,10}$" data-type="password" />
+	                                </div>
+	                                <span class="input-message">必填项</span>
+	                                <div class="input-wrong wrongMsg"></div>
+	                            </div>
+	                        </dd>
+	                        <dd class="input-item">
+	                            <div class="input-body">
+	                            	<label class="input-label"><b class="required">*</b> 确认密码：</label>
+	                                <div class="input-frame">
+	                                    <input type="text" name="pwd" data-require="true" data-empty="请输入确认密码" data-error="确认密码格式不正确" data-reg="^[a-zA-Z0-9]{6,10}$" data-type="password" data-equal="pwdRepeat" equal-message="密码输入不一致"/>
+	                                </div>
+	                                <span class="input-message">必填项</span>
+	                                <div class="input-wrong wrongMsg"></div>
+	                            </div>
+	                        </dd>
+
+		                    <dd class="input-item">
+		                        <div class="input-body">
+		                        	<label class="input-label">状态：</label>
+		                            <div class="input-frame input-box">
+		                                <input type="radio" name="state" value="1" id="state_1" />
+		                                <label for="state_1">在职</label>
+		                                <input type="radio" name="state" value="2" id="state_2" />
+		                                <label for="state_2">学生</label>
+		                            </div>
+		                            <span class="input-message block">非必填项</span>
+		                            <div class="input-wrong block wrongMsg"></div>
+		                        </div>
+		                    </dd>
+							
+							<dd class="input-item">
+		                        <div class="input-body">
+		                        	<label class="input-label"><b class="required">*</b> 爱好：</label>
+		                            <div class="input-frame input-box">
+		                                <input type="checkbox" name="hobby" value="1" id="hobby_1" data-type="checkbox" data-empty="请至少选择一个爱好" data-error="请至少选择一个爱好"/>
+		                                <label for="hobby_1">爱好_1</label>
+		                                <input type="checkbox" name="hobby" value="2" id="hobby_2" data-type="checkbox" data-empty="请至少选择一个爱好" data-error="请至少选择一个爱好"/>
+		                                <label for="hobby_2">爱好_2</label>
+		                                <input type="checkbox" name="hobby" value="2" id="hobby_3" data-type="checkbox" data-empty="请至少选择一个爱好" data-error="请至少选择一个爱好"/>
+		                                <label for="hobby_3">爱好_3</label>
+		                                <input type="checkbox" name="hobby" value="4" id="hobby_4" data-type="checkbox" data-empty="请至少选择一个爱好" data-error="请至少选择一个爱好"/>
+		                                <label for="hobby_4">爱好_4</label>
+		                                <input type="checkbox" name="hobby" value="5" id="hobby_5" data-type="checkbox" data-empty="请至少选择一个爱好" data-error="请至少选择一个爱好"/>
+		                                <label for="hobby_5">爱好_5</label>
+		                            </div>
+		                            <span class="input-message">必填项</span>
+		                            <div class="input-wrong wrongMsg"></div>
+		                        </div>
+		                    </dd>
+
+		                    <dd class="input-item">
+		                        <div class="input-body">
+		                        	<label class="input-label">
+		                        	地区：</label>
+		                            <div class="input-frame">
+		                                <select name="sections" id="sections" data-require="true" data-type="select" data-empty="请选择地区" data-error="请选择地区">
+		                                	<option value="0">请选择</option>
+		                                	<option value="1">华东</option>
+		                                	<option value="2">华南</option>
+		                                	<option value="3">华西</option>
+		                                	<option value="4">华北</option>
+		                                	<option value="5">华中</option>
+		                                </select>
+		                            </div>
+		                            <span class="input-message block">非必填项</span>
+		                            <div class="input-wrong block wrongMsg"></div>
+		                        </div>
+		                    </dd>
+
+		                    <dd class="input-item">
+	                            <div class="input-body">
+	                            	<label class="input-label">履历：</label>
+	                                <div class="input-frame input-box">
+	                                    <ul>
+	                                    	<li>
+	                                    		<div class="input-body">
+					                            	<label class="input-label">年份：</label>
+					                                <div class="input-frame">
+					                                    <input type="text" />
+					                                </div>
+					                                <!-- <span class="input-message block">非必填项</span> -->
+					                                <div class="input-wrong block wrongMsg"></div>
+					                            </div>
+	                                    	</li>
+	                                    	<li>
+	                                    		<div class="input-body">
+					                            	<label class="input-label">经历：</label>
+					                                <div class="input-frame">
+					                                    <input type="text" />
+					                                </div>
+					                                <!-- <span class="input-message block">非必填项</span> -->
+					                                <div class="input-wrong block wrongMsg"></div>
+					                            </div>
+	                                    	</li>
+	                                    	<li>
+	                                    		<div class="input-body">
+						                        	<label class="input-label">简述：</label>
+						                            <div class="input-frame">
+						                                <textarea name="others" id="" cols="30" rows="10" placeholder="这是一个文本输入框的示意样式。"></textarea>
+						                            </div>
+						                            <!-- <span class="input-message block">非必填项</span> -->
+						                            <div class="input-wrong block wrongMsg"></div>
+						                        </div>
+	                                    	</li>
+	                                    </ul>
+	                                </div>
+	                            </div>
+	                        </dd>
+
+	                        <dd class="input-item">
+	                            <div class="input-body">
+	                            	<label class="input-label">其他：</label>
+	                                <div class="input-frame input-box">
+	                                    <ul class="oneline">
+	                                    	<li>
+	                                    		<div class="input-body no-label">
+					                                <div class="input-frame">
+					                                    <input type="text" data-require="true" data-empty="请输入1" data-error="1格式不正确" data-type="email"/>
+					                                </div>
+					                            </div>
+	                                    	</li>
+	                                    	<li>
+	                                    		<div class="input-body no-label">
+					                                <div class="input-frame">
+					                                    <input type="text" data-require="true" data-empty="请输入1" data-error="1格式不正确" data-type="email"/>
+					                                </div>
+					                            </div>
+	                                    	</li>
+	                                    	<li>
+	                                    		<div class="input-body no-label">
+						                            <div class="input-frame">
+					                                    <input type="text" data-require="true" data-empty="请输入1" data-error="1格式不正确" data-type="email"/>
+					                                </div>
+						                        </div>
+	                                    	</li>
+	                                    </ul>
+	                                </div>
+	                                <div class="input-wrong block wrongMsg"></div>
+	                            </div>
+	                        </dd>
+
+		                    <dd class="input-item">
+		                        <div class="input-body">
+		                        	<label class="input-label">
+		                        	其他：</label>
+		                            <div class="input-frame">
+		                                <textarea name="others" id="" cols="30" rows="10" placeholder="这是一个文本输入框的示意样式。"></textarea>
+		                            </div>
+		                            <span class="input-message block">非必填项</span>
+		                            <div class="input-wrong block wrongMsg"></div>
+		                        </div>
+		                    </dd>
+
+		                    <dd class="input-item">
+		                        <div class="input-body">
+		                        	<label class="input-label"></label>
+		                            <div class="input-frame input-box w-auto">
+		                                <button class="submit">提 交</button>
+		                            </div>
+		                            <span class="input-message">提交按钮</span>
+		                            <div class="input-wrong wrongMsg"></div>
+		                        </div>
+		                    </dd>
+						</dl>
+					</form>
+				</div>
+			</section>
+			<ul>
+				<li>
+					<span class="label">安装：</span>
+					<ul class="explain">
+						<li>
+							引入jQuery作为基础
+						</li>
+						<li>
+							引入limitInput.js脚本文件
+						</li>
+						<li>
+							给需要限制输入的输入框定义一个共同的类，比如：numOnly
+						</li>
+						<li>
+							在dom加载完后执行如下代码：
+							<code>
+								$('.numOnly').inputNumOnly();
+							</code>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span class="label">参数：</span>（以html属性的形式绑定到元素上）
+					<ul class="explain">
+						<li>
+							numOnly-max --- 允许输入的最大值，可配合输入框自身的 maxlength 属相一起使用；
+						</li>
+						<li>
+							numonly-type --- 指定输入的数字类型，缺省为 (0,numOnl-max) 	区间内的整数；
+							可指定为 ‘float’ 值，支持两位小数的浮点值；
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span class="label">优化：</span>
+					<ul class="explain">
+						<li>
+							目前仅支持 <em class="em">整数数字 && 保留两位小数的浮点数字</em> 这两种格式，而且验证正则表达式是内置到插件中的。日后需要优化为用户可以 <em class="em">自定义正则表达式 && 数据类型 && 格式化输入内容</em>......
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span class="label">更新日志：</span>
+					<ul id="versions" class="explain">
+						<li>更新日志读取中...</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer" class="smartFixElemFooter">
+		CopyRight &copy; wangshuai
+	</div>
+
+	<script type="text/javascript" src="../../sys/plugins/jQuery/jQuery 1.12.0.min.js"></script>
+	<!-- 读取插件日志的方法 -->
+	<script type="text/javascript" src="../../sys/js/getVersions.js"></script>
+	<script type="text/javascript" src="./js/validate.js"></script>
+	<script type="text/javascript">
+		$('.inputSection').validate({
+			// subAction: 'form',
+			subSource: 'user',
+			subData: [{
+				"name": "test",
+				"sex": "1"
+			}]
+		});
+		// $('#versions').validate({
+		// 	validType : {
+		// 		test: function(){
+
+		// 		}
+		// 	}
+		// });
+	</script>
+</body>
+</html>

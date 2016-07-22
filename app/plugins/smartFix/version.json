@@ -1,0 +1,24 @@
+{
+	"info" : {
+		"name": "前端插件 -- 自动滚动浮动",
+		"en" : "smartFix"
+		},
+	"versions" : [
+		{
+			"date": "2015-12-10",
+			"desc": "创建",
+			"file": {
+				"compress": "",
+				"uncompress": ""
+			}
+		},
+		{
+			"date": "2016-1-15",
+			"desc": "添加移动端支持，增加一个参数，用来解决移动端有浮动导航条的偏移问题，修复若干bug。",
+			"file": {
+				"compress": "",
+				"uncompress": ""
+			}
+		}
+	]
+}

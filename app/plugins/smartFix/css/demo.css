@@ -1,0 +1,10 @@
+/*plugins-smartFloat*/
+.smartFix #nav{
+	width: 100%;
+	padding: 10px 0;
+	background-color: rgba(109, 76, 65, 0.8);
+
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}

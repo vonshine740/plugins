@@ -1,0 +1,340 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-ms-touch-action: none;
+}
+body {
+	font-size: 12px;
+	font-family: '微软雅黑', helvetica, arial;
+}
+
+/*公用demo结构样式*/
+body,html{
+	height: 100%;
+	background-color: #eee;
+}
+
+/*头部#header*/
+#header{
+	background: #6d4c41;
+	padding: 10px;
+
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	line-height: 1.5em;
+}
+/*中间适应主容器*/
+.container{ 
+	width: 860px;
+	margin: 0 auto; 
+	font-size: 16px;
+}
+/*底部  固定在底部*/
+#footer {
+	width: 100%;
+	height: 48px;
+	padding: 0;
+	background-color: rgba(0,0,0,0.3);
+
+	line-height: 48px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+}
+
+.wrapper {
+	background: #fff;
+	padding: 15px;
+}
+/*左右布局*/
+.left,.right{
+	float: left;
+}
+.left{
+	width: 70%;
+
+}
+.right{
+	width: 30%;
+}
+
+/*效果演示区块*/
+.demo-sec{
+	margin: 20px 10px 30px 10px;
+	border: 3px dashed #ddd;
+	background-color: #efefef;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.demo-sec .wrapper{
+	background-color: #efefef;
+	padding: 20px;
+}
+.demo-sec h2{
+	padding: 10px 20px;
+	border-bottom: 3px solid #ddd;
+}
+
+/*代码展示区块*/
+code{
+	display: block;
+	padding: 10px;
+	margin: 20px 0;
+	border-radius: 3px;
+	background-color: #000;
+
+	color: #09ee19;
+	line-height: 2em;
+}
+/*着重展示的文字*/
+.em{
+	color: #6d4c41!important;
+	text-decoration: underline;
+	font-weight: bold;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+/*参数展示是的样式*/
+.label{
+	font-size: 18px;
+	font-weight: bold;
+}
+.explain{
+	margin: 20px 10px 20px 30px;
+}
+.explain li{
+	margin-bottom: 10px;
+	list-style: square inside;
+	line-height: 1.5em;
+	color: #888;
+}
+#versions.explain li{
+	list-style: none;
+	border-bottom: 1px dashed #ccc;
+	padding: 10px 0;
+}
+#versions.explain li .time{
+	font-size: 14px;
+	color: #000;
+}
+#versions.explain li:first-child{
+	padding-top: 0;
+}
+#versions.explain li:last-child{
+	border-bottom: 0;
+}
+#versions.explain li .right a,#versions.explain li .right span{
+	border-left: 3px solid rgba(109, 76, 65, 0.5);
+	height: 1.5em;
+	line-height: 1.5em;
+	padding-left: 8px;
+	margin-left: 10px;
+	font-size: 14px;
+}
+#versions.explain li .right a:hover{
+	border-left: 3px solid rgba(109, 76, 65, 1);
+}
+
+/*表单输入样式*/
+.required{
+	color: #f00!important;
+}
+.input-item{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.input-body{
+	margin-left: 7em;
+
+	position: relative;
+	z-index: 1;
+}
+.input-body.no-label{
+	margin-left: 0!important;
+}
+.input-body:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.input-body{
+	*zoom:1;
+}
+.input-label{
+	position: absolute;
+	left: -7em;
+	top:8px;
+
+	width: 7em;
+
+	font-family: '宋体';
+	color: #898989;
+	font-weight: bold;
+	text-align: right;
+}
+
+.input-frame{
+	/*height: 34px;*/
+	width: 60%;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	background-color: #fbfbfb;
+
+	float: left;
+	overflow: hidden;
+
+	line-height: 30px;
+}
+.input-frame.error{
+	border-color: #f00!important;
+}
+.input-frame.error input{
+	color: #f00!important;
+}
+.input-frame.w-auto{
+	width: auto!important;
+}
+.input-frame input,
+.input-frame select,
+.input-frame textarea{
+	display: block;
+	
+	width: 100%;
+	padding: 8px 0 8px 0;
+	border: none;
+	margin: 0 8px;
+	background-color: transparent;
+
+	line-height: normal;
+}
+/*静态文本容器 && checkbox、radio等的小的input*/
+.input-frame.input-box{
+	border: 0;
+	background-color: transparent;
+}
+.input-frame.input-box input,
+.input-frame.input-box select,
+.input-frame.input-box textarea{
+	width: auto;
+	display: inline-block;
+}
+
+/*二级输入*/
+.input-frame .input-body .input-frame{
+	width: 100%;
+}
+.input-frame .input-body .input-label{
+	top: 3px;
+}
+.input-frame ul,
+.input-frame dl{
+	margin-top: 32px;
+}
+.input-frame ul.oneline,
+.input-frame dl.oneline{
+	margin-top:0;
+}
+.input-frame ul.oneline li,
+.input-frame dl.oneline dd,
+.input-frame dl.oneline dt{
+	float: left;
+	width: 30%;
+	margin-right: 5%;
+}
+.input-frame ul.oneline li:last-child,
+.input-frame dl.oneline dd:last-child,
+.input-frame dl.oneline dt:last-child{
+	margin-right: 0!important;
+}
+.input-frame ul.oneline:after,
+.input-frame dl.oneline:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.input-frame.input-box .input-frame input,
+.input-frame.input-box .input-frame select,
+.input-frame.input-box .input-frame textarea{
+	display: block;
+	width: 100%;
+}
+
+/*select美化*/
+select{
+	padding-left: 8px!important;
+	padding-right: 0!important;
+	margin-left: 0!important;
+	margin-right: 0!important;
+    border:1px solid #f00;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('../images/select.png');
+    background-repeat: no-repeat;
+    background-position: right -1px;
+}
+option{
+	padding-left: 8px!important;
+}
+/*.ie9 .beauty-select{
+    background-image: none;
+}*/
+select::-ms-expand{display: none\0;}   /*ie 9*/
+.input-message{
+	margin-top: 8px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+	color: #898989;
+	font-family: '宋体';
+
+	float: left;
+}
+.input-message.block{
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+.input-wrong{
+	margin-top: 8px;
+
+	color: #f00;
+
+	float: left;
+}
+.input-wrong.block{
+	width: 100%;
+	margin-top: 10px;
+}
+
+/*button按钮*/
+button{
+	border-radius: 3px;
+	background-color: #0078ff;
+	min-width: 5em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	color: #fff;
+	font-size: 16px;
+	font-family: '微软雅黑';
+	text-align: center;
+
+	cursor: pointer;
+}
+button:hover{
+	background-color: #3192ff;
+}
+
+
+/*通用结构相应样式*/
+@media all and (max-width: 980px){
+    #contaienr{width: 100%;padding: 0;}
+}

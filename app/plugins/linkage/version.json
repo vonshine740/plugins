@@ -1,0 +1,16 @@
+{
+	"info" : {
+		"name": "前端插件 -- 联动效果",
+		"en" : "linkage"
+		},
+	"versions" : [
+		{
+			"date": "2016-1-27",
+			"desc": "添加整理归档。",
+			"file": {
+				"compress": "",
+				"uncompress": ""
+			}
+		}
+	]
+}
