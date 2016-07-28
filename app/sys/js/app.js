@@ -1,7 +1,8 @@
+'use strict';
 var myScroll;
 
 function loaded () {
-	myScroll = new IScroll('#wrapper', { 
+	myScroll = new IScroll('#wrapper', {
 		useTransition: false,
 		mouseWheel: true,	//支持鼠标滚动
 		scrollbars: true,	//显示滚动条
@@ -11,12 +12,22 @@ function loaded () {
 	});
 }
 
-function getList(){
-	if(list && list.length > 0){
-		return list;
-	}else{
-		return false;
-	}
+function getList(callback){
+	$.ajax({
+		type: "GET",
+        url: "./sys/data.json",
+        dataType: "json",
+        success: function(data){
+        	if(data && data.length > 0){
+        		callback(data, '#scroller');
+			}else{
+				callback(false, '#scroller');
+			}
+        },
+        error: function(data){
+        	console.log(data);
+        }
+	});
 }
 
 function initList(data, container){
@@ -36,9 +47,7 @@ function initList(data, container){
 		item.push('<li></li>');
 		if( typeof container === 'string' && $(container).length > 0 || typeof container === 'object' ){
 			$(container).append(item.join(' '));
-			return true;
-		}else{
-			return false;
+			myScroll.refresh();
 		}
 	}
 }
@@ -48,12 +57,6 @@ $(function(){
 	// 初始化iScroll
 	loaded();
 
-	var list = getList();
-	
-	var flag = initList(list, $('#data-list'));
-
-	if(flag){
-		myScroll.refresh();
-	}
+	var list = getList(initList);
 
 });

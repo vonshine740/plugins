@@ -1,0 +1,7 @@
+{
+  "name": "dailycoding",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.0.1"
+  }
+}
